@@ -1,0 +1,210 @@
+<!doctype html>
+
+<!--
+
+                                   :::::::::::,
+                               ::;:::::::;:::::::,  
+                            ::;;:::::::@@@@;:::::::
+                          ,:::::::::::::@    #@':::::
+                        :::::::::::::::'@@      @;::::
+                      ::::::::::::'@@@@'      .+:::
+                    ::::::::::;@@@#.              ,:::,
+                  .::::::::+@#@                   ::::
+                 :::::::+@@'                       ::::
+               :::::'@@:                         :::.
+              ,::::@@:                           ::::
+             ;::::::@                            .:::;
+            :;:::::;@                          :::;
+           :::::::::@        @                 ;::::
+          :::::::::#          @              ,::::
+         :::::::::@         +@ @             .::::
+        .::::::'@@       @@'  @             ::::,
+        :::::::++@@@@@@@@@@.                 ::::;
+       ;:::::::+,   ..                    :::::
+      ,::::::::',                          :::::
+      :::::::::+,                         :::::
+     :::::::::+@.                        ,::::.                     ,
+     ::::::;;@+                         .::;::                     ;
+    :::::::@@                          :::;:                   ::
+    ::::::#@                           ;::::                  .::
+    :::::;@                           :::::               .;::
+    :::::@                           :;:::            ::::;
+    :::::#                           :::::.        ,;:::::
+    ::::::                          ::::::,.,::::::::::.
+    ,::::::              .::        ::::::::::::::::;
+     ;::::::::,.,:::::,          ::::::::::::::.
+      ::::::::::::::::::            ::::::::::
+       ::::::::::::,                  .:::.
+           ..
+
+-->
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>微博热词－@十四大盗</title>
+    
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <meta name="author" content="Jhon Wong" />
+
+    <link href="css/font.css" rel="stylesheet" />
+
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/qrcode.js"></script>
+</head>
+
+<body class="impress-not-supported">
+<div id="bg"></div>
+<div id="qr-container">
+    <div id="qrcode"></div>
+    <div id="mask"></div>
+</div>
+
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress">
+
+    <div id="title" class="step" data-x="100" data-y="300" data-scale="4">
+        <span class="try" style="font-size: 0.85em;">想知道微博上什么最火吗？</span>
+        <h1>微博热词<sup>*</sup></h1>
+        <div class="footnote">
+            <sup>*</sup>新浪微博热词抓取分析展示系统。By <b id="author">十四大盗</b>
+        </div>
+        <aside class="notes">test notes</aside>
+    </div>
+
+    <div id="bored" class="step slide" data-x="-1200" data-y="-1500">
+        <q><h1>项目概述</h1><br>
+            <ul>
+                <li>数据抓取</li>
+                <li>数据分析</li>
+                <li>数据展示</li>
+                <li>测试</li>
+            </ul>
+        <img style="margin-top: -420px; float:right;" src="images/taoweibo.png"></q>
+    </div>
+
+    <div class="step slide" data-x="-200" data-y="-1500">
+        <q><h1>实现功能</h1><br>
+        <div style="margin-left: 100px; float: left;">
+            高级功能：<br>
+            <sup>-</sup>数据抓取<br>
+            <sup>-</sup>数据展示<br>
+        </div>
+        <div style="margin-right: 100px; float: right;">
+            初级功能：<br>
+            <sup>-</sup>数据分析<br>
+            <sup>-</sup>测试
+        </div></q>
+    </div>
+
+    <div id="structure" class="step slide" data-x="800" data-y="-1500">
+        <q><h1>项目结构</h1>
+        <div style="font-size: 0.85em; line-height: 1.3em;">
+            hotword-dal: 数据访问层<br>
+            hotword-frontend: 前端展示模块<br>
+            hotword-nodepush: Node.js推送服务<br>
+            hotword-qatest: 质量保证测试<br>
+            hotword-queryservice: 查询服务<br>
+            hotword-segmentation: 分词模块<br>
+            hotword-spider: 数据抓取模块<br>
+            hotword-webapp: 前端数据服务
+        </div></q>
+    </div>
+
+    <div class="step slide" data-x="1800" data-y="-1500">
+        <q><h1>系统架构</h1>
+            <img width=800 src="images/structure.png">
+        </q>
+    </div>
+
+    <div id="its" class="step" data-x="0" data-y="3000" data-rotate="90" data-scale="5" style="width: 600px;">
+        <q><h1 style="font-weight: bold; font-size: 1.2em; color: black;">数据抓取</h1>
+        - 微博爬虫<br>
+        - 全量与分量<br>
+        - 过滤<br>
+        - tddl数据存储<br>
+        - zookeeper分布式系统
+        </q>
+    </div>
+
+    <div id="zookeeper" class="step" data-x="-1200" data-y="3000" data-rotate="90" data-scale="0.3">
+        <img src="images/zookeeper.png" style="width: 650px">
+    </div>
+
+    <div id="bigtwo" style="width: 500px;" class="step" data-x="2800" data-y="3800" data-rotate="180" data-scale="5">
+        <q><h1>数据分析</h1>
+            - 分词算法<br>
+            - 统计<br>
+            - 执行方式<br>
+            - 数据存储</q>
+    </div>
+
+    <div id="ingtwo" class="step" style="width: 500px;" data-x="3200" data-y="1300" data-rotate="270" data-scale="5">
+        <q><h1>数据展示</h1>
+- No frameworks<br>
+- 浏览器兼容<br>
+- Ajax交互<br>
+- Comet方式推送<br>
+- 响应式布局<br>
+- 扫码<br>
+        </q>
+    </div>
+
+    <div id="ing" class="step" data-x="3500" data-y="-900" data-rotate="180" data-scale="6">
+        <q><h1>测试</h1>
+            - JUnit单元测试<br>
+            - jmeter压力测试<br>
+            - DOH前端测试<br>
+            - 安全检测<br>
+        </q>
+    </div>
+
+    <div id="big" class="step" data-x="6200" data-y="-600" data-scale="5">
+        <p><span class="thoughts">无图无真相</span><b>Show Time</b> <span class="thoughts">骚年何不来一发</span></p>
+    </div>
+
+    <div id="source" class="step" data-x="6300" data-y="2500" data-rotate="20" data-scale="4" style="text-align: center;">
+        <h1 style="margin-top: 200px;">我们是十四大盗</h1>
+        <img src="images/logo.png">
+    </div>
+
+    <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
+        <p>接下来...</p>
+    </div>
+
+    <div id="its-in-3d" class="step" data-x="6600" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2" style="width: 400px;">
+        <p><span class="have">真</span> <span class="you">人</span> <span class="noticed">兽</span> <span class="its"><sup>*</sup></span> <span class="in">爆</span><b>照</p>
+        <span class="footnote">*欢迎吐槽</span>
+    </div>
+
+    <div class="step" data-x="6390" data-y="4600" data-z="-150" data-rotate-x="-40" data-rotate-y="45"  data-rotate-z="-10" data-scale="0.1" style="width: 800px; padding: 0;">
+        
+        <img src="images/p1.jpg">
+    </div>
+    <div class="step" data-x="6480" data-y="4580" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="0.09" style="width: 800px; padding: 0;">
+        
+        <img src="images/p2.jpg">
+    </div>
+    <div class="step" data-x="6550" data-y="4590" data-z="-50" data-rotate-x="-40" data-rotate-y="-20" data-rotate-z="20" data-scale="0.08" style="width: 800px; padding: 0;">
+        
+        <img src="images/p3.jpg">
+    </div>
+
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+</div>
+<script src="js/impress.js"></script>
+<script src="js/index.js"></script>
+<script src="plugin/notes/notes.js"></script>
+</body>
+</html>

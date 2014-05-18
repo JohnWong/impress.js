@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=320" />
+    <link href="css/control.css" rel="stylesheet" />
+</head>
+<body>
+<div class="container">
+	<a class="btn btn-primary btn-lg" id="left">Prev</a>
+	<a class="btn btn-success btn-lg" id="right">Next</a>
+	<a class="btn btn-info btn-lg" id="home">Home</a>
+	<div style="clear:both"></div>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io.connect('http://{$ip}:{$port}');
+ 
+  var byId = function(id){
+  	return document.getElementById(id);
+  }
+
+  byId('left').addEventListener("click",function(){
+  	 socket.emit('control', 'left');
+  },false);
+
+  byId('right').addEventListener("click",function(){
+  	 socket.emit('control', 'right');
+  },false);
+
+  byId('home').addEventListener("click",function(){
+  	 socket.emit('control', 'home');
+  },false);
+</script>
+</body>
+</html>
