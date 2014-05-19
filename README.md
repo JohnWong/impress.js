@@ -2,9 +2,9 @@ impress.js
 ============
 
 It's a presentation framework based on the power of CSS3 transforms and 
-transitions in modern browsers and forked from [impress.js](https://github.com/bartaz/impress.js). I added some amazing features, including sharing, remote control and notes.
+transitions in modern browsers and forked from [impress.js](https://github.com/bartaz/impress.js). I added some amazing features, including fullscreen mode, sharing, remote control and notes.
 
-这是一个基于现代浏览器CSS3动画效果的演示框架，从 [impress.js](https://github.com/bartaz/impress.js) fork而来。我添加了一些令人惊奇的功能，包括共享播放、远程控制和备注。
+这是一个基于现代浏览器CSS3动画效果的演示框架，从 [impress.js](https://github.com/bartaz/impress.js) fork而来。我添加了一些令人惊奇的功能，包括全屏模式、共享播放、远程控制和备注。
 
 **WARNING**
 
@@ -12,17 +12,32 @@ You need to know about [impress.js](https://github.com/bartaz/impress.js). Then 
 
 你需要先了解[impress.js](https://github.com/bartaz/impress.js)，然后再来看我添加的新功能。
 
+WHATS NEW
+----
+* Fullscreen Support
+* Sharing
+* Remote Control
+* Notes
+
 
 HOW TO RUN IT
 ---------------
 
-You need to install Node.js and socket.io module. If not, only notes feature is still available. You can run it with:
+You need to install Node.js and socket.io module. If not, sharing and remote controll will not be available. You can run it with:
 
     node server.js
 
-你需要安装Node.js和socket.io模块。不安装的话还剩下备注功能能够使用。运行的时候使用命令
+你需要安装Node.js和socket.io模块。不安装的话分享和远程控制无法使用。运行的时候使用命令
 
     node server.js
+    
+
+FULLSCREEN MODE
+----
+Press 'f', the presentation will go fullscreen mode.
+
+按'f'键，演示将会切换到全屏模式
+
 
 SHARING
 ---------
@@ -55,7 +70,7 @@ Press 's' to open notes window. Notes window will show time, current slide with 
 LICENSE
 ---------
 
-Copyright 2011-2012 Bartek Szopka
+Copyright 2011-2014 John Wong
 
 Released under the MIT and GPL (version 2 or later) Licenses.
 
