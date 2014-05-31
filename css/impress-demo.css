@@ -734,6 +734,11 @@ h1{
     text-align: center;
     z-index: 1001;
     padding: 12px;
+    -webkit-transform: translateZ(1000px);
+    -moz-transform:    translateZ(1000px);
+    -ms-transform:     translateZ(1000px);
+    -o-transform:      translateZ(1000px);
+    transform:         translateZ(1000px);
 }
 #mask {
     position: fixed;

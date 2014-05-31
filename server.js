@@ -19,9 +19,13 @@ app.listen(port);
       }
     }
   }
-  ip = addresses[0];
-  console.log('Server running at http://' + addresses[0] + ':' + port + '/');
-  console.log('Control device open http://' + addresses[0] + ':' + port + '/control.html?' + key);
+  if (addresses.length > 0){
+    ip = addresses[0];
+  } else {
+    ip = '127.0.0.1';
+  }
+  console.log('Server running at http://' + ip + ':' + port + '/');
+  console.log('Control device open http://' + ip + ':' + port + '/control.html?' + key);
 }();
 
 function returnStatic(path, res) {
